@@ -3,96 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Asana</title>
+    <title>Document</title>
 </head>
 <style>
-    body, ul {
-        margin: 0;
+    .siteheader{
+        background-color: #FFFFFF;
+        justify-content: space-between;
+        transition: padding 225ms, transform 300ms ease-out;
+        width: 100%;
+        z-index: 900;
+        box-shadow: none;
+        top: 0;
+        position: fixed;
+    }
+    .horizontalnavigation_list-item{
+           height:calc(100% + 16px) !important;
+           widthcalc:(100% + 48px) !important;
+           top:8px !important;
+           margin: 0;
         padding: 0;
     }
-    
-    /* Style the header */
-    .asana-header {
-        background-color:#eeed;
-        color: #fff;
-        padding: 0px 0px;
-        padding-bottom: 0px;
-        padding-top: 60PX;
+    .siteheader_raw{
+        background-color: #eeebea !important;
+        height: 46px;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        padding-top: 10px;
+    }
+    .siteheader_wapper{
+        padding: 0 64px 0;
+        height: 100%;
+        max-width: 1270px;
         display: flex;
-        justify-self: left;
+        flex-wrap: nowrap;
+        flex-direction: row;
         align-items: center;
-        margin: auto;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 16px 0;
+        overflow: hidden;
     }
-    
-    .logo img {
-        background-color: #eeed;
-        width: 250px;
-        height: 73px;
-        padding: 0px 40px 0px; /* Adjust as needed */
-    }
-    
-    .nav-menu ul {
-        list-style: none;
+    .siteheader_nav-group{
         display: flex;
-    }
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: 100%;
     
-    .nav-menu li {
-        margin-right: 20px;
     }
-    .nav-menu li:hover{
-        background-color:black;
-    }
-    
-    .nav-menu a {
+    .siteheader_logo{
+        display: blocklz;
+        position: relative;
+        background-color: transparent;
+        color: #0D0E10;
+        cursor: pointer;
+        font-weight: 500;
         text-decoration: none;
-        color: #aba1a1;
+        transition: color 300ms;
+        overflow: visible;
+        }
+        .siteheader__logo svg {
+        display: block;
+        height: 22px;
+        width: 111px;
+        overflow: visible !important;
+        }
+
+    .horizontalnavigation{
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        padding: 0 0 0 32px;
+        margin-bottom: 15px;
+        }
+    .horizontalnavigation_list{
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        list-style-type: disc;
+        list-style-type: none;
+    }
+    .navigation__link{
+        padding: 0 13px 0;
+        margin: 0;
+        background: none;
+        border-radius: 0;
+        border: 0;
+        color: #727272;
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        letter-spacing: 0;
+        font-size: 14px;
+        line-height: 56px;
+        text-decoration: none;
+        font-family: "gordita", "Helvetica Neue", "Helvetica", sans-serif;
         font-weight: bold;
     }
-    
-    .login-button {
-        padding: 10px 20px;
-        color: #aba1a1;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-        font-weight: bold;
-        margin-left: -13px;
+    .siteheader_second_nev{
+        margin-right: 0;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-flex-wrap: nowrap;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 100%;
+        margin-right: 24px;
+        margin-left: 8px;
+        border-left: 1px solid #E0DEDC;
+        margin-bottom: 15px;
+        margin-top: 8px;
+        
+    }
+    .language_logo{
+        height: 20px;
+        width: 20px;
+        position: relative;
+        overflow: inherit;
+        margin-right:80px;
+        border: none;
     }
     
-    .login-button:hover {
-        color:black;
-    }
-    
-    .get_started-button{
-        padding: 10px 20px;
-        margin-left: 10px;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-        font-weight: bold;
-        background-color: black;
-    }
-    .get_started-button:hover{
-        background-color:#e0386d ;
+    .space_after_language{
+        border-left: 1px solid #E0E6E8;
+        height: 24px;
+        width: 0;
     }
     .contect-button{
         padding: 10px 20px;
-        margin-left: 640PX;
+        margin-left: -51PX;
         color: #aba1a1;
         text-decoration: none;
         border-radius: 5px;
         transition: background-color 0.3s ease;
+        font-family: "gordita", "Helvetica Neue", "Helvetica", sans-serif;
         font-weight: bold;
-    
+        font-size: 16px;
+
     }
-    .contect-button:hover {
+    .contect-button:hover{
+        color: #0D0E10;
+    }
+    .get_started-button{
+        border-radius: 3px;
+        text-align: none;
+        height: auto;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 5px;
+        padding: 16px 11px;
+        margin-left: 24px;
+        border: 1px solid #0D0E10;
+        background-color: #0D0E10;
+        color: #FFFFFF;
+        -webkit-transition: all 0.3s;
+        transition:all 0.3s;
+        font-family: "gordita", "Helvetica Neue", "Helvetica", sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .get_started-button:hover{
+        background-color: #ff5263;
+    }
+    .login-button{
+        color: #aba1a1; 
+        font-family: "gordita", "Helvetica Neue", "Helvetica", sans-serif; 
+        font-weight: bold;
+        font-size: 16px;
+        margin-left:14px;
+        margin-right:9px;
+    }
+    .login-button:hover{
         color:black;
+    }
+    .navigation__link:hover{
+        color: black;
+    }
+    .dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot:hover{
+       background-color: #0D0E10;
     }
     .header_continer{
         background-color:#eeed;
-        width: 100%;
+        width: 170%;
         padding-bottom: 51px;
         padding-top: 106px;
         margin-bottom: 39px!important;
@@ -113,10 +229,10 @@
     
     }
     .main_text{
-        margin-bottom: 30px;
+        margin-bottom: 31px;
         text-align: center;
-        margin-left: 10px;
-        margin-top: -120px;
+        margin-left: 14px;
+        margin-top: -24px;
         color: #0D0E10;
     
     }
@@ -131,12 +247,12 @@
     }
     .small_text{
         font-size: 21px;
-        line-height: 28px;
+        line-height: 26px;
         display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: -11px;
-        margin-inline-end: -2px;
+        margin-block-start:-4em;
+        margin-block-end: -1em;
+        margin-inline-start: 409px;
+        margin-inline-end: 50px;
     
     }
     .new_get_started-button{
@@ -194,7 +310,7 @@
         padding-top: 32px;
     }
     .container{
-        max-width: 1312px;
+        max-width: 1850px;
         width: calc(100% - (4 * 32px));
         box-sizing: border-box;
         margin-left: auto;
@@ -210,7 +326,7 @@
         margin: 0 4.3%;
         display: grid;
         grid-column-gap: 8px;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-auto-flow: dense;
         -webkit-align-items: center;
         -webkit-box-align: center;
@@ -224,46 +340,47 @@
     }
     .big_text{
         color: #0D0E10;
-        font-size: 22px;
+        font-size: 63px;
         line-height: 25px;
         margin-bottom: 26px;
         font-weight: 500;
         display: block;
-        margin-block-start: 1.33em;
-        margin-block-end: 1.33em;
-        margin-inline-start: 0px;
+        margin-block-start: 0.33em;
+        margin-block-end: 2.33em;
+        margin-inline-start: 335px;
         margin-inline-end: 0px;
         font-weight: bold;
 
     }
-    .p{
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        -webkit-justify-content: flex-start;
-        justify-content: flex-start;
+        
+    .big_main_text{color: #0D0E10;
+        font-size: 26px;
+        line-height: 23px;
+        margin-bottom: 26px;
+        font-weight: 500;
+        display: block;
+        margin-block-start: 0.33em;
+        margin-block-end: 1.33em;
+        margin-inline-start: 194px;
+        margin-inline-end: -26px;
+        font-weight: bold;
+        font-family: "gordita", "Helvetica Neue", "Helvetica", sans-serif;
+    }
+    .small_text_link{
+        text-decoration: none;
         color: #0D0E10;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-        position: relative;
-        font-size: 16px;
-        line-height: 28px;
-        padding: 0;
-        font-weight: 400;
-        touch-action: manipulation;
+        font-size: 24px;
+        margin-left: 193px;
+        font-family: "gordita", "Helvetica Neue", "Helvetica", sans-serif;
+    }
+    .small_text_link:hover{
+        color: #ff9ca5;
     }
     .Asana_logo{
         grid-template: 100px/repeat(4, 1fr);
         row-gap: 0;
         grid-column: 6/-1;
-        gap: 40px;
+        gap: 53px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         place-items: center;
@@ -332,29 +449,60 @@
     }
 </style>
 <body>
-    <header class="asana-header">
-        <div class="logo">
-            <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\asana-logo.png"alt="Asana Logo">
+    <div id="next" data-reactroot>
+        <div>
+            <header class="siteheader">
+                <div class="siteheader_raw">
+                    <div class="siteheader_wapper">
+                        <div class="siteheader_nav-group">
+                            <a href="https://asana.com/?noredirect" class="siteheader_logo"> 
+                                <svg width="112px" height="22px" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="asana-logo-title"></svg>
+                            </a>
+                            <nav class="horizontalnavigation">
+                                <ul class="horizontalnavigation_list" role="group" style="padding-top: 0px;">
+                                    <li class="horizontalnavigation_list-item">
+                                        <a href="#" class="navigation__link">Product </a>
+                                    <li class="horizontalnavigation_list-item">
+                                        <a href="#" class="navigation__link">Solutions </a>
+                                    </li>
+                                    <li class="horizontalnavigation_list-item">
+                                        <a href="#"class="navigation__link">Resources</a>
+                                    </li>
+                                    <li class="horizontalnavigation_list-item">
+                                        <a href="#" class="navigation__link">Enterprise</a>
+                                    </li>
+                                    <li class="horizontalnavigation_list-item">
+                                        <a href="#" class="navigation__link">Pricing</a>
+                                    </li>  
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="siteheader_second_nev">
+                            <div class="language_logo">
+                                <div style="text-align:center">
+                                    <a href="#">
+                                    <span class="dot"></span>
+                                  </div>
+                            </div>
+                            <div class="user-action">
+                                <a href="#" class="contect-button">Contect Sales</a>
+                            </div>
+                            <div class="user-actions">
+                                <a class="login-button">Log In</a>
+                            </div>
+                            <div class="user-action">
+                                <a class="get_started-button">Get Started</a>
+                            </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
         </div>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Download</a></li>
-            </ul>
-        </nav>
-        <div class="user-action">
-            <a href="#" class="contect-button">Contect Sales</a>
-        </div>
-        <div class="user-actions">
-            <a href="#" class="login-button">Log In</a>
-        </div>
-        <div class="user-action">
-            <a href="#" class="get_started-button">Get Started</a>
-        </div>
-    </header>
+    </div>
+</body>
+</html>
     <header id="text" class="header_continer">
         <div class =" header_continer_colunm">
             <div class="continer_text">
@@ -380,26 +528,28 @@
     <header class="container">
         <div class="continer_column">
             <div class="cointer_text">
-                <h4 class="big_text">80% of Fortune 100 companies use Asana</h4>
+                <h4 class="big_main_text">80% of Fortune 100 companies use Asana</h4>
                 <p>
-                    <a href="https://asana.com/customers">See how customer use Asana</a>
+                    <a href="https://asana.com/customers" class="small_text_link">See how customer use Asana</a>
                 </p>
                 
             </div>
             <div class="Asana_logo">
                 <div class="amezon_logo">
-                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\amazon-logo-1x.png" alt="">
+                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\amazon-logo-1x.png" alt="" height="80" width="150">
                 </div>
                 <div class="roku_logo">
-                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\logo-roku-1x.png"alt="">
+                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\logo-roku-1x.png"alt="" height="80" width="150">
                 </div>
                 <div class="mcKesson_logo">
-                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\McKessonlogo.png" alt="">
+                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\McKessonlogo.png" alt="" height="80" width="150">
                 </div>
                 <div class="deloitte">
-                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\Deloitte.png" alt="">
+                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\Deloitte.png" alt=""height="80" width="150">
                 </div>
             </div>
+            <hr>
+            
         </div>
     </header>
 </body>
