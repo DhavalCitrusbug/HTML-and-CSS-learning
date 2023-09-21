@@ -6,200 +6,335 @@
     <link rel="stylesheet" href="styles.css">
     <title>Asana</title>
 </head>
-
 <style>
-    /* Reset some default styles */
-body, ul {
-    margin: 0;
-    padding: 0;
-}
+    body, ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Style the header */
+    .asana-header {
+        background-color:#eeed;
+        color: #fff;
+        padding: 0px 0px;
+        padding-bottom: 0px;
+        padding-top: 60PX;
+        display: flex;
+        justify-self: left;
+        align-items: center;
+        margin: auto;
+    }
+    
+    .logo img {
+        background-color: #eeed;
+        width: 250px;
+        height: 73px;
+        padding: 0px 40px 0px; /* Adjust as needed */
+    }
+    
+    .nav-menu ul {
+        list-style: none;
+        display: flex;
+    }
+    
+    .nav-menu li {
+        margin-right: 20px;
+    }
+    .nav-menu li:hover{
+        background-color:black;
+    }
+    
+    .nav-menu a {
+        text-decoration: none;
+        color: #aba1a1;
+        font-weight: bold;
+    }
+    
+    .login-button {
+        padding: 10px 20px;
+        color: #aba1a1;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+        margin-left: -13px;
+    }
+    
+    .login-button:hover {
+        color:black;
+    }
+    
+    .get_started-button{
+        padding: 10px 20px;
+        margin-left: 10px;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+        background-color: black;
+    }
+    .get_started-button:hover{
+        background-color:#e0386d ;
+    }
+    .contect-button{
+        padding: 10px 20px;
+        margin-left: 640PX;
+        color: #aba1a1;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+    
+    }
+    .contect-button:hover {
+        color:black;
+    }
+    .header_continer{
+        background-color:#eeed;
+        width: 100%;
+        padding-bottom: 51px;
+        padding-top: 106px;
+        margin-bottom: 39px!important;
+        font-size: 65px;
+        line-height: 1.3;
+    }
+    .header_continer_colunm{
+        margin: auto;
+        grid-column-gap: 31px;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 0 5.7%;
+        display: grid;
+    
+    }
+    .continer_text{
+        grid-column: 2/12;
+        text-align: center;
+    
+    }
+    .main_text{
+        margin-bottom: 30px;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: -120px;
+        color: #0D0E10;
+    
+    }
+    h2{
+        display: block;
+        font-size: 63px;
+        margin-block-start: 0.83em;
+        margin-block-end: 28px;
+        margin-inline-start: 4px;
+        margin-inline-end: 0px;
+    
+    }
+    .small_text{
+        font-size: 21px;
+        line-height: 28px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: -11px;
+        margin-inline-end: -2px;
+    
+    }
+    .new_get_started-button{
+        border-radius: 3px;
+        text-align: center;
+        height: auto;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 28px;
+        padding: 11px 24px;
+        margin-left: 800px;
+        border: 1px solid #0D0E10;
+        background-color: #0D0E10;
+        color: #FFFFFF;
+        -webkit-transition: all 0.3s;
+        transition:
+        all 0.3s;
+    }
+    .new_get_started-button:hover{
+        background-color: #e0386d;
+    }
+    .see_how_it_work-button{
+        border-radius: 3px;
+        text-align: center;
+        height: auto;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 28px;
+        padding: 11px 24px;
+        border: 1px solid #0D0E10;
+        background-color:transparent;
+        color: black;
+        -webkit-transition: all 0.3s;
+        transition:
+        all 0.3s;
+    }
+    .see_how_it_work-button:hover{
+        background-color:#e0386d
+    }
+    .video{
+        border-radius: 10px;
+        width: 100%;
+        object-fit: cover;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+    .new_img{
+        padding-left: 318px;
+        padding-top: 32px;
+    }
+    .container{
+        max-width: 1312px;
+        width: calc(100% - (4 * 32px));
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        transition: width 150ms;
+        width: calc(100% - (2 * 32px));
 
-/* Style the header */
-.asana-header {
-    background-color:#eeed;
-    color: #fff;
-    padding: 0px 0px;
-    padding-bottom: 0px;
-    display: flex;
-    justify-self: left;
-    align-items: center;
-    margin: auto;
-}
+    }
+    .continer_column{
+        padding-bottom: 60px;
+        border-bottom: 1px solid #CFCBCB;
+        grid-column-gap: 32px;
+        margin: 0 4.3%;
+        display: grid;
+        grid-column-gap: 8px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-flow: dense;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
 
-.logo img {
-    background-color: #eeed;
-    width: 250px;
-    height: 73px;
-    padding: 0px 40px 0px; /* Adjust as needed */
-}
+    }
+    .continer_text{
+        grid-column: 1/6;
 
-.nav-menu ul {
-    list-style: none;
-    display: flex;
-}
+    }
+    .big_text{
+        color: #0D0E10;
+        font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 26px;
+        font-weight: 500;
+        display: block;
+        margin-block-start: 1.33em;
+        margin-block-end: 1.33em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
 
-.nav-menu li {
-    margin-right: 20px;
-}
-.nav-menu li:hover{
-    background-color:black;
-}
+    }
+    .p{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        color: #0D0E10;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        position: relative;
+        font-size: 16px;
+        line-height: 28px;
+        padding: 0;
+        font-weight: 400;
+        touch-action: manipulation;
+    }
+    .Asana_logo{
+        grid-template: 100px/repeat(4, 1fr);
+        row-gap: 0;
+        grid-column: 6/-1;
+        gap: 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+    .amezon_logo{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
 
-.nav-menu a {
-    text-decoration: none;
-    color: #aba1a1;
-    font-weight: bold;
-}
+    }
+    .roku_logo{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
 
-.login-button {
-    padding: 10px 20px;
-    color: #aba1a1;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-    margin-left: -13px;
-}
+    }
+    .mcKesson_logo{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .deloitte{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
 
-.login-button:hover {
-    color:black;
-}
-
-.get_started-button{
-    padding: 10px 20px;
-    margin-left: 10px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-    background-color: black;
-}
-.get_started-button:hover{
-    background-color:#e0386d ;
-}
-.contect-button{
-    padding: 10px 20px;
-    margin-left: 640PX;
-    color: #aba1a1;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-
-}
-.contect-button:hover {
-    color:black;
-}
-.header_continer{
-    background-color:#eeed;
-    width: 100%;
-    padding-bottom: 51px;
-    padding-top: 106px;
-    margin-bottom: 39px!important;
-    font-size: 65px;
-    line-height: 1.3;
-}
-.header_continer_colunm{
-    margin: auto;
-    grid-column-gap: 31px;
-    grid-template-columns: repeat(12, 1fr);
-    margin: 0 5.7%;
-    display: grid;
-
-}
-.continer_text{
-    grid-column: 2/12;
-    text-align: center;
-
-}
-.main_text{
-    margin-bottom: 30px;
-    text-align: center;
-    margin-bottom: 7px;
-    margin-top: -120px;
-    color: #0D0E10;
-
-}
-h2{
-    display: block;
-    font-size: 63px;
-    margin-block-start: 0.83em;
-    margin-block-end: 28px;
-    margin-inline-start: 4px;
-    margin-inline-end: 0px;
-
-}
-.small_text{
-    font-size: 21px;
-    line-height: 28px;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: -11px;
-    margin-inline-end: -2px;
-
-}
-.new_get_started-button{
-    border-radius: 3px;
-    text-align: center;
-    height: auto;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    line-height: 28px;
-    padding: 11px 24px;
-    margin-left: 800px;
-    border: 1px solid #0D0E10;
-    background-color: #0D0E10;
-    color: #FFFFFF;
-    -webkit-transition: all 0.3s;
-    transition:
-    all 0.3s;
-}
-.new_get_started-button:hover{
-    background-color: #e0386d;
-}
-.see_how_it_work-button{
-    border-radius: 3px;
-    text-align: center;
-    height: auto;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    line-height: 28px;
-    padding: 11px 24px;
-    border: 1px solid #0D0E10;
-    background-color:transparent;
-    color: black;
-    -webkit-transition: all 0.3s;
-    transition:
-    all 0.3s;
-}
-.see_how_it_work-button:hover{
-    background-color:#e0386d
-}
-.video{
-    border-radius: 10px;
-    width: 100%;
-    object-fit: cover;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-.new_img{
-    padding-left: 318px;
-    padding-top: 32px;
-}
-
+    }
 </style>
 <body>
     <header class="asana-header">
         <div class="logo">
-            <img src="asana-logo.png" alt="Asana Logo">
+            <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\asana-logo.png"alt="Asana Logo">
         </div>
         <nav class="nav-menu">
             <ul>
@@ -238,7 +373,7 @@ h2{
     </header>
     <header class="img">
         <div class="new_img">
-            <img src="new_img.png" alt="" >
+            <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\new_img.png" alt="" >
         </div>
     </header>
     </header>
@@ -246,20 +381,23 @@ h2{
         <div class="continer_column">
             <div class="cointer_text">
                 <h4 class="big_text">80% of Fortune 100 companies use Asana</h4>
-                <a href="https://asana.com/customers">See how customer use Asana</a>
+                <p>
+                    <a href="https://asana.com/customers">See how customer use Asana</a>
+                </p>
+                
             </div>
             <div class="Asana_logo">
                 <div class="amezon_logo">
-                    <img src="amazon-logo-1x.png" alt="">
+                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\amazon-logo-1x.png" alt="">
                 </div>
                 <div class="roku_logo">
-                    <img src="logo-roku-1x.png" alt="">
+                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\logo-roku-1x.png"alt="">
                 </div>
                 <div class="mcKesson_logo">
-                    <img src="McKessonlogo.png" alt="">
+                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\McKessonlogo.png" alt="">
                 </div>
                 <div class="deloitte">
-                    <img src="Deloitte.png" alt="">
+                    <img src="C:\Users\Dhaval Citrusbug\html css\HTML-and-CSS-learning\images\Deloitte.png" alt="">
                 </div>
             </div>
         </div>
