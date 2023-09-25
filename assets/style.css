@@ -125,7 +125,8 @@
 }
 
 .navigation__link {
-    padding: 0 13px 0;
+    padding: 0 29px 0;
+    padding-right: 13px;
     margin: -2px;
     background: none;
     border-radius: 0;
@@ -135,7 +136,7 @@
     display: inline-block;
     height: 85%;
     letter-spacing: 0;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 56px;
     text-decoration: none;
     font-family: "gordita", "Helvetica Neue", "Helvetica", sans-serif;
@@ -423,7 +424,7 @@ h2 {
 
 .big_text {
     color: #0D0E10;
-    font-size: 58px;
+    font-size: 57px;
     line-height: 25px;
     margin-bottom: 26px;
     font-weight: 500;
@@ -455,7 +456,7 @@ h2 {
 .small_text_link {
     text-decoration: none;
     color: #0D0E10;
-    font-size: 15px;
+    font-size: 18px;
     margin-left: 193px;
     font-family: "gordita", "Helvetica Neue", "Helvetica", sans-serif;
     font-weight: normal;
